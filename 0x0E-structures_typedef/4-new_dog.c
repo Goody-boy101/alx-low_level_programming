@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "dog.h"
 
- /**
-  * _strlen - returns the length of a string
-  * @s: string to evaluate
-  *
-  * Return: the length of the string
-  */
+/**
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
+ */
 int _strlen(char *s)
 {
 	int i;
@@ -15,10 +15,10 @@ int _strlen(char *s)
 
 	while (s[i] != '\0')
 	{
-		 i++;
+		i++;
 	}
 
-	 return (i);
+	return (i);
 }
 
 /**
@@ -43,7 +43,7 @@ char *_strcpy(char *dest, char *src)
 
 	for (i = 0; i < len; i++)
 	{
-		  dest[i] = src[i];
+		dest[i] = src[i];
 	}
 	dest[i] = '\0';
 
@@ -81,7 +81,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(dog);
 		free(dog->name);
-		return (NULL)
+		return (NULL);
 	}
 	_strcpy(dog->name, name);
 	_strcpy(dog->owner, owner);
