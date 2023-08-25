@@ -15,9 +15,9 @@ size_t print_list(const list_t *h)
 	while (h)
 	{
 		if (h->str)
-			printf("Node[%lu]: %s\n", num_nodes, (h->str);
+			printf("Node[%1u]: %s\n", num_nodes, h->str);
 		else
-			printf("Node[%lu]: (nil)\n", num_nodes);
+			printf("Node[%1u]: (nil)\n", num_nodes);
 
 		h = h->next;
 		num_nodes++;
