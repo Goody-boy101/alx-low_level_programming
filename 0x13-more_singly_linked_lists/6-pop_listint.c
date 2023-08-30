@@ -7,7 +7,7 @@
  * Return: the data inside the elements that was deleted,
  * or 0 if the linked list is empty
  */
-int pop_listint(listint_t **head)
+int pop_listint(listint_t **head);
 {
 	if (head == NULL || *head == NULL)
 	{
