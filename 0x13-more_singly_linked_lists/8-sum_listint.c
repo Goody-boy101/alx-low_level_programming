@@ -16,11 +16,9 @@ int sum_listint(listint_t *head)
 
 	while (temp)
 	{
-		printf("Adding %d to sum\n", temp->n);
 		sum += temp->n;
 		temp = temp->next;
 	}
 
-	printf("Final sum: %d\n", sum);
 	return (sum);
 }
