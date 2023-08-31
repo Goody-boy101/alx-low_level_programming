@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * get_bit - returns the value of a bit at an index in a decimal number
- * @n: number to search
- * @index: index of the bit
- *
- * Return: value of the bit at the index (0 or 1) or -1 on error
+ * get_endianness - checks if a machine is little or big endian
+ * Return: 0 for big endian, 1 for little endian
  */
-int get_bit(unsigned long int n, unsigned int index)
+int get_endianness(void)
 {
-	return ((index < sizeof(unsigned long int) * 8) ? ((n >> index) & 1) : -1);
+	unsigned int test_value = 1;
+	char *test_bytes = (char *)&test_value;
+
+	return (*test_bytes);
 }
