@@ -6,26 +6,22 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, count = 0;
-	unsigned long int mask = 1UL << 63;
+	int i;
+	int started = 0;
 
-	while (mask > 0)
+	for (i = 63; i >= 0; i--)
 	{
-		if (n & mask)
+		int bit = (n >> i) & 1;
+
+		if (bit)
 		{
 			_putchar('1');
-			count++;
+			started = 1;
 		}
-		else if (count)
-		{
+		else if (started)
 			_putchar('0');
-		}
-
-		mask >>= 1;
 	}
 
-	if (!count)
-	{
+	if (!started)
 		_putchar('0');
-	}
 }
